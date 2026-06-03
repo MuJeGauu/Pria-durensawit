@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hussain</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4ebd9; /* Menyamakan warna krem di web kamu */
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 { color: #b38f43; }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #b38f43;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #927333; }
+        #pesan { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Game Tebak Angka CEO</h1>
+    <p>Saya sudah memikirkan angka antara <b>1 sampai 20</b>. Bisa tebak?</p>
+    
+    <input type="number" id="tebakan" placeholder="Masukkan angkamu...">
+    <br>
+    <button onclick="cekTebakan()">Tebak!</button>
+
+    <p id="pesan"></p>
+</div>
+
+<script>
+    // Menentukan angka rahasia secara acak saat game dimulai
+    const angkaRahasia = Math.floor(Math.random() * 20) + 1;
+    let jumlahTebakan = 0;
+
+    function cekTebakan() {
+        const tebakanUser = parseInt(document.getElementById('tebakan').value);
+        const pesan = document.getElementById('pesan');
+        jumlahTebakan++;
+
+        if (isNaN(tebakanUser) || tebakanUser < 1 || tebakanUser > 20) {
+            pesan.innerHTML = "Masukkan angka yang valid (1-20) ya!";
+            pesan.style.color = "red";
+        } else if (tebakanUser === angkaRahasia) {
+            pesan.innerHTML = `🎉 Selamat! Kamu benar setelah ${jumlahTebakan} kali mencoba. Angkanya adalah ${angkaRahasia}!`;
+            pesan.style.color = "green";
+        } else if (tebakanUser < angkaRahasia) {
+            pesan.innerHTML = "Terlalu RENDAH! Coba angka yang lebih besar.";
+            pesan.style.color = "orange";
+        } else {
+            pesan.innerHTML = "Terlalu TINGGI! Coba angka yang lebih kecil.";
+            pesan.style.color = "orange";
+        }
+    }
+</script>
+
+</body>
+</html>
