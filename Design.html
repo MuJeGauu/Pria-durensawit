@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desain — Unip</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px dashed #b38f43;
+            border-radius: 12px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .card-title {
+            margin-top: 15px;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="index.html">U<span>.</span></a>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li class="active"><a href="Design.html">Desain</a></li>
-      <li><a href="Product.html">Produk</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <a class="nav-logo" href="index.html">U.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="Design.html">Design</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
 
-  <div class="hero">
-    <span class="hero-label">Halaman 02</span>
-    <h1>Seni &amp; <em>Desain</em></h1>
-    <div class="hero-line"></div>
-    <p class="hero-sub">
-      Desain bukan sekadar tampilan — ia adalah cara berpikir. Ia menyatukan fungsi
-      dan keindahan menjadi sesuatu yang terasa utuh dan bermakna.
-    </p>
-  </div>
-
-  <div class="section">
-    <div class="section-grid">
-      <div class="section-aside">
-        <span class="section-label">Filosofi</span>
-        <span class="section-number">02</span>
-      </div>
-      <div class="content-body">
-        <p>
-          Desain yang baik lahir dari pemahaman yang dalam — tentang siapa penggunanya,
-          apa yang mereka butuhkan, dan bagaimana sebuah karya bisa membuat hidup mereka
-          sedikit lebih mudah atau lebih indah.
+    <!-- KOTAK 1: LOGO DARI CANVA -->
+    <div class="card-container">
+        
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHM1snxTXk/nLRHgaPomJxr5M682j8x6A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHM1snxTXk&#x2F;nLRHgaPomJxr5M682j8x6A&#x2F;view?utm_content=DAHM1snxTXk&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Purple Geometric Thesis Defense Presentation</a> by Muhammad Jesus Gautama
+        
+        <div class="card-title">Apex Geometric Logo</div>
+        <p class="card-desc">
+            • <b>Apex:</b> Menunjukkan titik puncak tertinggi (ambisi & kesuksesan).<br>
+            • <b>Geometric:</b> Menunjukkan logika pemrograman yang rapi, presisi, dan terstruktur.
         </p>
-        <p>
-          Teks adalah kumpulan kata yang tersusun untuk menyampaikan informasi, gagasan, atau
-          perasaan. Ia bisa hadir dalam banyak bentuk — naratif yang bercerita, deskriptif yang
-          melukiskan gambaran, eksposisi yang menjelaskan, prosedur yang membimbing langkah demi
-          langkah, hingga argumentasi yang menyuarakan pendapat dengan penuh keyakinan.
-        </p>
-        <p>
-          Dalam dunia desain, kata dan visual adalah dua bahasa yang bekerja beriringan.
-          Ketika keduanya selaras, lahirlah karya yang tidak hanya dilihat, tetapi juga dirasakan.
-          Itulah tujuan setiap goresan, setiap pilihan warna, dan setiap baris teks yang disusun
-          dengan penuh perhatian.
-        </p>
-      </div>
     </div>
-  </div>
 
-  <footer>
-    <p>&copy; 2026 Messi. Semua hak dilindungi.</p>
-    <span class="footer-mark">Dibuat oleh Isa</span>
-  </footer>
+    <!-- KOTAK 2: PDF DARI GITHUB -->
+    <div class="card-container">
+        <div style="width: 100%; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid #ccc;">
+            <!-- Memanggil file ask.pdf yang di-upload di Tahap 1 -->
+            <object data="ask.pdf" type="application/pdf" width="100%" height="100%">
+                <p>Browser tidak mendukung preview PDF. <a href="ask.pdf">Klik di sini untuk mendownload</a>.</p>
+            </object>
+        </div>
+        <div class="card-title">Engineering Design Process - ASK</div>
+        <p class="card-desc">Dokumentasi tahap awal (Ask) dalam merancang game.</p>
+    </div>
 
 </body>
 </html>
